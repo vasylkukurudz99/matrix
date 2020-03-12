@@ -1,0 +1,53 @@
+
+.card {
+  margin: 10px 0;
+  min-width: 600px;
+  background-color: white;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  &__wrapper {
+    padding: 24px;
+  }
+  &__title-description {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  &__skill-options {
+    display: flex;
+    align-items: center;
+  }
+  &__skill-option {
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__control {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 5px;
+  }
+  &__control-name {
+    font-size: 14px;
+    width: 65px;
+  }
+  &__radio-options {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 5px;
+  }
+}
+
+::ng-deep {
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: red;
+  }
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-inner-circle {
+    background-color: red;
+  }
+}

@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card__wrapper">
+    <div class="card__title">
+      {{skill.title}}
+    </div>
+    <div class="card__title-description">
+      {{skill.desc}}
+    </div>
+    <div class="card__skill-options">
+      <div *ngFor="let rate of rateSkills">
+        <div class="card__skill-option">{{ rate.text }}</div>
+      </div>
+    </div>
+    <div class="card__form-wrapper">
+      <form [formGroup]="skill.form">
+        <div class="card__control" >
+          <div class="card__control-name">
+            Current
+          </div>
+          <mat-radio-group class="card__radio-options" formControlName="current">
+            <mat-radio-button *ngFor="let radioValue of radioValues" [value]="+radioValue"></mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="card__control">
+          <div class="card__control-name">
+            Desired
+          </div>
+          <mat-radio-group class="card__radio-options" formControlName="desired">
+              <mat-radio-button *ngFor="let radioValue of radioValues" [value]="+radioValue"></mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="card__control">
+          <div class="card__control-name">
+            Expert
+          </div>
+          <mat-radio-group class="card__radio-options" formControlName="expert">
+              <mat-radio-button *ngFor="let radioValue of radioValues" [value]="+radioValue"></mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
